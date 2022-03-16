@@ -1,0 +1,16 @@
+//CONTADOR
+export const INCREMENTAR= 'INCREMENTAR';
+export const DECREMENTAR= 'DECREMENTAR';
+export const INCREMENTAR_5= 'INCREMENTAR_5';
+export const DECREMENTAR_5= 'DECREMENTAR_5';
+export const RESET= 'RESET';
+
+
+
+
+
+
+//SHOPPING CART
+
+//CRUD
+
