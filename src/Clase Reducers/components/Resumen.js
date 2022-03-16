@@ -20,9 +20,9 @@ const Resumen = ({ cart, setShowResumen }) => {
         <p>
           Productos <span style={{ fontWeight: "bold" }}>({cart.length})</span>
         </p>
-        <p style={{ fontWeight: "bold", fontSize: "1.2rem" }}>S/. {total}</p>
+        <p style={{ fontWeight: "bold", fontSize: "1.2rem" }}>$ {total}</p>
       </div>
-      <ul class="list-group list-group-flush">
+      <ul className="list-group list-group-flush">
         {cart.map((item) => (
           <li
             className="list-group-item d-flex justify-content-between align-items-center"
