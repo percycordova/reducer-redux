@@ -1,0 +1,43 @@
+.cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+}
+img{
+  display: block;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.box {
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0 0 1rem #00000025 inset;
+}
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+.content-btns{
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+.content-btns p{
+  margin: 0;
+  padding: 0.5rem 2rem;
+}
+.product-delete{
+position: absolute;
+top: .1rem;
+right: .1rem;
+}
+.resumen img{
+  display: block;
+  max-width: 200px;
+  max-height: 80px;
+
+}
+

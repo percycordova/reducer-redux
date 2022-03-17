@@ -15,7 +15,7 @@ const store = createStore(
 );
 
 store.subscribe(() => {
-  console.log(store);
+  // console.log(store);
 })
 
 
