@@ -1,7 +1,7 @@
 const ProductCart = ({ data, delFromCart, addCount, restCount }) => {
-  const { name, price, id, count } = data;
+  const { name, price, id, count, img } = data;
   return (
-    <div className="border cart p-4 position-relative">
+    <div className="border cart p-2 sm:p-4 position-relative">
       <div
         className="btn btn-danger product-delete"
         onClick={() => delFromCart(id)}
@@ -9,7 +9,7 @@ const ProductCart = ({ data, delFromCart, addCount, restCount }) => {
         x
       </div>
       <img
-        src="https://f.rpp-noticias.io/2021/01/18/1047228202101121653257897jpg.jpg "
+        src={img}
         alt="img"
         className=""
       />

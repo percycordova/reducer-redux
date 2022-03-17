@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: .4rem;
 }
 img{
   display: block;
   max-width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 .box {
   padding: 1.5rem;
@@ -31,5 +33,11 @@ img{
 position: absolute;
 top: .1rem;
 right: .1rem;
+}
+.resumen img{
+  display: block;
+  max-width: 200px;
+  max-height: 80px;
+
 }
 

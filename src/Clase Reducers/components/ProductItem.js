@@ -1,11 +1,11 @@
 import React from "react";
 
 const ProductItem = ({ data, addToCart }) => {
-  const { name, price, id } = data;
+  const { name, price, img, id } = data;
   return (
     <div className="border cart p-4 ">
       <img
-        src="https://f.rpp-noticias.io/2021/01/18/1047228202101121653257897jpg.jpg "
+        src={img}
         alt="img"
         className=""
       />

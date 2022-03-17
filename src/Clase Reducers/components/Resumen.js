@@ -6,7 +6,9 @@ const Resumen = ({ cart, setShowResumen }) => {
   }, 0);
 
   return (
-    <div className="mt-5 mb-5 border p-5 position-relative">
+    <div className="mt-5 mb-5 border p-2 sm: p-4 position-relative mx-auto resumen" style={{
+      maxWidth: "600px",
+    }}>
       <p
         className="position-absolute btn btn-danger"
         style={{ right: "2px", top: "2px" }}
@@ -14,44 +16,56 @@ const Resumen = ({ cart, setShowResumen }) => {
       >
         -
       </p>
-      <h2 className="mb-5">Total a Pagar</h2>
+      <h2 className="mb-5 d-inline-block  " style={{borderBottom:'.12rem solid gray',paddingBottom:'1rem'}}>Total a Pagar</h2>
 
-      <div className="d-flex justify-content-between align-items-center">
-        <p>
+      <div className="d-flex justify-content-between align-items-center ">
+        <p >
           Productos <span style={{ fontWeight: "bold" }}>({cart.length})</span>
         </p>
         <p style={{ fontWeight: "bold", fontSize: "1.2rem" }}>$ {total}</p>
       </div>
-      <ul className="list-group list-group-flush">
+      <ul className="list-group list-group-flush  ">
         {cart.map((item) => (
           <li
-            className="list-group-item d-flex justify-content-between align-items-center"
+            className="list-group-item d-flex justify-content-between px-2 py-3 align-items-start"
             key={item.id}
           >
-            <div className="d-flex">
+            <div className="d-flex gap-1 justify-content-between align-items-center">
               <img
-                src="https://f.rpp-noticias.io/2021/01/18/1047228202101121653257897jpg.jpg "
+                src={item.img}
                 alt="img"
                 width={100}
+                height={70}
                 className=""
               />
               <div className="">
-                <h6 className="">{item.name}</h6>
-                <p className="text-danger" style={{ fontWeight: "bold" }}>
-                  S/. {item.price}
+                <h6
+                  className=""
+                  style={{
+                    fontSize: ".9rem",
+                  }}
+                >
+                  {item.name}
+                </h6>
+                <p className="text-danger" style={{ fontWeight: "bold", fontSize: ".85rem", }}>
+                  $ {item.price}
                 </p>
               </div>
             </div>
-            <div>
-              <p>
-                código: <span style={{ fontWeight: "600" }}>00{item.id}</span>{" "}
+            <div className=" mt-1">
+              <p
+                style={{
+                  fontSize: ".9rem",
+                }}
+              >
+                código: <span style={{ fontWeight: "600" }}>0{item.id}</span>{" "}
               </p>
               <p
                 className=""
                 style={{
                   textAlign: "right",
-                  fontSize: ".8rem",
-                  marginTop: "-12px",
+                  fontSize: ".7rem",
+                  marginTop: "-13px",
                 }}
               >
                 {item.count} un.

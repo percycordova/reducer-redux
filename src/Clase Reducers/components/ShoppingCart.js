@@ -46,7 +46,7 @@ const ShoppingCart = () => {
   };
   return (
     <div>
-      <h2 className="text-center mb-5">Carritos de Compras</h2>
+      <h1 className="text-center mb-5">Carritos de Compras</h1>
       <h3 className="" style={{ marginLeft: "1rem" }}>
         Productos
       </h3>
@@ -71,17 +71,30 @@ const ShoppingCart = () => {
           <h4>No hay productos en su carrito</h4>
         )}
       </article>
-      <div className="d-flex justify-content-center gap-4">
-        <button className="btn btn-outline-success " onClick={clearCart}>
+
+      <div className="d-sm-none d-flex justify-content-center gap-4">
+        <button className="btn btn-outline-success btn-sm" onClick={clearCart}>
           Limpiar Carrito
         </button>
         <button
-          className="btn btn-outline-primary "
+          className="btn btn-outline-primary btn-sm "
           onClick={() => setShowResumen(true)}
         >
           Ver Resumen de tu Compra
         </button>
       </div>
+      <div className="d-none  d-sm-flex justify-content-center gap-4">
+        <button className="btn btn-outline-success btn-lg" onClick={clearCart}>
+          Limpiar Carrito
+        </button>
+        <button
+          className="btn btn-outline-primary  btn-lg"
+          onClick={() => setShowResumen(true)}
+        >
+          Ver Resumen de tu Compra
+        </button>
+      </div>
+
       {showResumen && <Resumen cart={cart} setShowResumen={setShowResumen} />}
     </div>
   );
